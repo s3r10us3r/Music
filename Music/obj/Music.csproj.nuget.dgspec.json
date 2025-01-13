@@ -1,0 +1,211 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/tradeckm/team_project/Website/Music/Music/Music.csproj": {}
+  },
+  "projects": {
+    "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj",
+        "projectName": "Dal",
+        "projectPath": "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj",
+        "packagesPath": "/home/tradeckm/.nuget/packages/",
+        "outputPath": "/home/tradeckm/team_project/Website/Music/Dal/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tradeckm/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/tradeckm/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/tradeckm/team_project/Website/Music/Models/Models.csproj": {
+                "projectPath": "/home/tradeckm/team_project/Website/Music/Models/Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/tradeckm/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tradeckm/team_project/Website/Music/Models/Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tradeckm/team_project/Website/Music/Models/Models.csproj",
+        "projectName": "Models",
+        "projectPath": "/home/tradeckm/team_project/Website/Music/Models/Models.csproj",
+        "packagesPath": "/home/tradeckm/.nuget/packages/",
+        "outputPath": "/home/tradeckm/team_project/Website/Music/Models/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tradeckm/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/tradeckm/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/tradeckm/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/tradeckm/team_project/Website/Music/Music/Music.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/tradeckm/team_project/Website/Music/Music/Music.csproj",
+        "projectName": "Music",
+        "projectPath": "/home/tradeckm/team_project/Website/Music/Music/Music.csproj",
+        "packagesPath": "/home/tradeckm/.nuget/packages/",
+        "outputPath": "/home/tradeckm/team_project/Website/Music/Music/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/tradeckm/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "/home/tradeckm/.dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj": {
+                "projectPath": "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj"
+              },
+              "/home/tradeckm/team_project/Website/Music/Models/Models.csproj": {
+                "projectPath": "/home/tradeckm/team_project/Website/Music/Models/Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/tradeckm/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
