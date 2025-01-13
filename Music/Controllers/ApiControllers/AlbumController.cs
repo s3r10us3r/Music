@@ -1,5 +1,6 @@
 using Dal.Interfaces;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using Music.Dtos;
@@ -64,5 +65,12 @@ public class AlbumController : ControllerBase
         var result = _albumService.GetPage(request);
         return Ok(result);
     }
-    
+
+
+    [Authorize]
+    [HttpGet("authTest")]
+    public async Task<IActionResult> AuthTest()
+    {
+        return Ok();
+    }
 }

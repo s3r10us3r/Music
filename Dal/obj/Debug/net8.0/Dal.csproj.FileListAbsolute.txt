@@ -13,3 +13,4 @@
 /home/tradeckm/team_project/Website/Music/Dal/obj/Debug/net8.0/refint/Dal.dll
 /home/tradeckm/team_project/Website/Music/Dal/obj/Debug/net8.0/Dal.pdb
 /home/tradeckm/team_project/Website/Music/Dal/obj/Debug/net8.0/ref/Dal.dll
+/home/tradeckm/team_project/Website/Music/Dal/obj/Debug/net8.0/Dal.sourcelink.json

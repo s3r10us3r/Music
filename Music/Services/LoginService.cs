@@ -28,7 +28,7 @@ public class LoginService
     {
         if (dto.Username.Length < 6)
             return new BadRequestObjectResult(new MessageDto("Username is too short!"));
-        if (_passwordCheckingService.CheckPassword(dto.Password, out var message))
+        if (!_passwordCheckingService.CheckPassword(dto.Password, out var message))
             return new BadRequestObjectResult(new MessageDto(message));
         var existingUser = await _userRepo.FindAsync(u => u.Username == dto.Username);
         if (existingUser != null)
