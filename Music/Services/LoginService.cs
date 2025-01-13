@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 using Music.Dtos;
+using Music.Helpers;
 using Music.Services.Interfaces;
 
 namespace Music.Services;
@@ -24,33 +25,33 @@ public class LoginService
         _jwtService = jwtService;
     }
 
-    public async Task<IActionResult> Register(LoginDto dto)
+    public async Task<Result> Register(LoginDto dto)
     {
         if (dto.Username.Length < 6)
-            return new BadRequestObjectResult(new MessageDto("Username is too short!"));
+            return Result.Failure(404, "Username is too short!");
         if (!_passwordCheckingService.CheckPassword(dto.Password, out var message))
-            return new BadRequestObjectResult(new MessageDto(message));
+            return Result.Failure(404, message);
         var existingUser = await _userRepo.FindAsync(u => u.Username == dto.Username);
         if (existingUser != null)
-            return new ConflictResult();
+            return Result.Failure(409, "Username already exists");
         var user = new User()
         {
             Username = dto.Username,
             HashedPassword = _passwordHasher.HashPassword(dto, dto.Password)
         };
         var model = await _userRepo.CreateAsync(user);
-        return new OkResult();
+        return Result.Success(200);
     }
 
-    public async Task<IActionResult> Login(LoginDto dto)
+    public async Task<Result<LoginResponseDto>> Login(LoginDto dto)
     {
         var user = await _userRepo.FindAsync(u => u.Username == dto.Username);
         if (user == null)
-            return new UnauthorizedObjectResult(new MessageDto("Invalid credentials"));
+            return Result<LoginResponseDto>.Failure(401, "Invalid credentials");
         var passwordValidationResult = _passwordHasher.VerifyHashedPassword(user, user.HashedPassword, dto.Password);
         if (passwordValidationResult != PasswordVerificationResult.Success)
-            return new UnauthorizedObjectResult(new MessageDto("Invalid credentials"));
+            return Result<LoginResponseDto>.Failure(401, "Invalid credentials");
         var jwt = _jwtService.CreateJwt(user);
-        return new OkObjectResult(new LoginResponseDto(jwt));
+        return Result<LoginResponseDto>.Success(200, new LoginResponseDto(jwt));
     }
 }

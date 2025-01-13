@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+    Layout = "_Layout";
+}
+
+<div class="d-flex justify-content-center align-items-center h-100">
+    <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%; border-radius: 10px;">
+        <h1 class="text-center mb-4">Login</h1>
+        <form id="loginForm">
+            <div class="form-group mb-3">
+                <label class="form-label" for="loginInput">Username:</label>
+                <input class="form-control" name="username" type="text" id="loginInput" placeholder="Enter your username" />
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label" for="passwordInput">Password:</label>
+                <input class="form-control" name="password" type="password" id="passwordInput" placeholder="Enter your password" />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="/Home/register" class="text-decoration-none">
+                Don't have an account yet? <span class="text-primary">Register here.</span>
+            </a>
+        </div>
+
+        <div class="text-center mt-3">
+            <small class="text-danger" id="errorSmall"></small>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("loginForm").addEventListener("submit", async function (event) {
+        event.preventDefault();
+        
+        const formData = new FormData(this);
+        
+        const data = Object.fromEntries(formData.entries())
+        const request = new Request("api/User/login", {
+            headers: {
+                "Content-Type": "application/json"
+            },
+            method: "POST",
+            body: JSON.stringify(data)
+        });
+        
+        try {
+            const response = await fetch(request);
+            if (!response.ok) {
+                const message = await response.json().message;
+                document.getElementById("errorSmall").textContent = message;
+                return;
+            }
+            const result = await response.json();
+            const date = new Date();
+            date.setTime(date.getTime() +  60 * 60 * 1000)
+            const item  = {
+                value: result.jwt,
+                expiry: date
+            }
+            localStorage.setItem("jwt", item);
+        } catch (error) {
+            console.error('an error occured', error);
+            alert("an unexpected error occured when logging in")
+        }
+    })
+
+</script>

@@ -1,4 +1,5 @@
 using Dal.Interfaces;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Music.Dtos;
 using Music.Services;
@@ -22,21 +23,27 @@ public class UserController : ControllerBase
     
     //potem po zalogowaniu token umieszczasz w headerze w tzw. 'bearer scheme' 
     //informacje o użytkowniku będę sam pobierał z tokenu
-    [HttpPost("/login")]
+    [HttpPost("login")]
     [ProducesResponseType(StatusCodes.Status401Unauthorized, Type = typeof(MessageDto))]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(LoginResponseDto))]
     public async Task<IActionResult> Login([FromBody] LoginDto dto)
     {
-        return await _loginService.Login(dto);
+        var result = await _loginService.Login(dto);
+        if (result.IsSuccess)
+            return Ok(result.Data);
+        return StatusCode(result.StatusCode, new MessageDto(result.Message));
     }
 
-    [HttpPost("/register")]
+    [HttpPost("register")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(MessageDto))]
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<IActionResult> Register([FromBody] LoginDto dto)
     {
-        return await _loginService.Register(dto);
+        var result = await _loginService.Register(dto);
+        if (result.IsSuccess)
+            return Ok();
+        return StatusCode(result.StatusCode, new MessageDto(result.Message));
     }
 
     [ProducesResponseType(StatusCodes.Status404NotFound)]

@@ -49,7 +49,7 @@ builder.Services.AddAuthentication("Bearer")
     });
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
 builder.Services.AddControllers();
 builder.Services.AddDal();
 builder.Services.AddServices();
@@ -124,7 +124,7 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapDefaultControllerRoute();
 app.MapControllers();
 
 app.Run();

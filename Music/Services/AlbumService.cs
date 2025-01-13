@@ -33,9 +33,24 @@ public class AlbumService
     
     public async Task<List<AlbumDto>> GetPage(AlbumPagedRequest request)
     {
+        var start = (request.PageNumber - 1) * request.PageSize;
+        var end = request.PageNumber * request.PageSize - 1;
+        
         var albumSet = _db.Set<Album>();
         var filtered =
             albumSet.Where(a => a.Name.Contains(request.SearchQuery) || a.Artist.Contains(request.SearchQuery));
+        
+        if (request.SortProperty == "AverageScore")
+        {
+            var tasksBlock = filtered.Select(a => GetAlbumDto(a));
+            var dtos = await Task.WhenAll(tasksBlock);
+            return request.SortOrder.ToLower() switch
+            {
+                "descending" => dtos.OrderByDescending(d => d.AverageScore).Take(new Range(start, end)).ToList(),
+                "ascending" => dtos.OrderByDescending(d => d.AverageScore).Take(new Range(start, end)).ToList(),
+            };
+        }
+        
         var sorted = request.SortProperty.ToLower() switch
         {
             "name" => SortInStringDirection(filtered, _nameSelector, request.SortOrder),
@@ -43,8 +58,7 @@ public class AlbumService
             "year" => SortInStringDirection(filtered, _yearSelector, request.SortOrder),
             _ => filtered
         };
-        var start = (request.PageNumber - 1) * request.PageSize;
-        var end = request.PageNumber * request.PageSize - 1;
+        
         var tasks = sorted.Take(new Range(start, end)).Select(a => GetAlbumDto(a));
         var result = await Task.WhenAll(tasks);
         return result.ToList();

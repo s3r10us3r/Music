@@ -1,0 +1,99 @@
+@model Music.Models.IndexModel
+
+@{
+    ViewData["Title"] = "Albums";
+    Layout = "_Layout";
+}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Albums</h1>
+
+    <!-- Album List -->
+    <div class="list-group">
+        @foreach (var album in Model.Albums)
+        {
+            <div class="list-group-item mb-3 shadow-sm p-3">
+                <!-- Album Information -->
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <img src="@album.Image" alt="@album.Name" class="img-fluid rounded" />
+                    </div>
+                    <div class="col-md-9">
+                        <h4>@album.Name</h4>
+                        <p><strong>Artist:</strong> @album.Artist</p>
+                        <p><strong>Year:</strong> @album.Year</p>
+                        <p>
+                            <strong>Average Score:</strong> @album.AverageScore/5.0 
+                            (<strong>@album.ReviewCount</strong> reviews)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation" class="mt-5">
+        <ul class="pagination justify-content-center">
+            <!-- Previous Page Link -->
+            <li class="page-item @(Model.PageNumber <= 1 ? "disabled" : "")">
+                <a class="page-link" href="?page=@(Model.PageNumber - 1)" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+
+            <!-- First Page Link -->
+            <li class="page-item @(Model.PageNumber == 1 ? "active" : "")">
+                <a class="page-link" href="?page=1">1</a>
+            </li>
+
+            <!-- Ellipsis Before Current Page -->
+            @if (Model.PageNumber > 3)
+            {
+                <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                </li>
+            }
+
+            <!-- Current Page and Surrounding Pages -->
+            @for (int i = Math.Max(2, Model.PageNumber - 1); i <= Math.Min(Model.PageCount - 1, Model.PageNumber + 1); i++)
+            {
+                <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                    <a class="page-link" href="?page=@i">@i</a>
+                </li>
+            }
+
+            <!-- Ellipsis After Current Page -->
+            @if (Model.PageNumber < Model.PageCount - 2)
+            {
+                <li class="page-item disabled">
+                    <span class="page-link">...</span>
+                </li>
+            }
+
+            <!-- Last Page Link -->
+            @if (Model.PageCount > 1)
+            {
+                <li class="page-item @(Model.PageNumber == Model.PageCount ? "active" : "")">
+                    <a class="page-link" href="?page=@Model.PageCount">@Model.PageCount</a>
+                </li>
+            }
+
+            <!-- Next Page Link -->
+            <li class="page-item @(Model.PageNumber >= Model.PageCount ? "disabled" : "")">
+                <a class="page-link" href="?page=@(Model.PageNumber + 1)">Next</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Optional Styling -->
+<style>
+    .pagination .page-item.active .page-link {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+    }
+
+    .pagination .page-item.disabled .page-link {
+        color: #6c757d;
+    }
+</style>

@@ -1,0 +1,81 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Register";
+}
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Register";
+}
+
+<div class="d-flex justify-content-center align-items-center h-100">
+    <div class="card shadow-sm p-4" style="max-width: 400px; width: 100%; border-radius: 10px;">
+        <h1 class="text-center mb-4">Register</h1>
+        <form id="registerForm" method="post" novalidate>
+            <div class="form-group mb-3">
+                <label class="form-label" for="usernameInput">Username:</label>
+                <input class="form-control" type="text" id="usernameInput" name="username" placeholder="Enter your username" required />
+                <small id="usernameError" class="text-danger d-none">Username must be at least 6 characters long.</small>
+                @if (ViewData.ModelState.ContainsKey("Username"))
+                {
+                <small class="text-danger">@ViewData.ModelState["Username"].Errors.FirstOrDefault()?.ErrorMessage</small>
+                }
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label" for="passwordInput">Password:</label>
+                <input class="form-control" type="password" id="passwordInput" name="password" placeholder="Enter your password" required />
+                <small id="passwordError" class="text-danger d-none">Password must be at least 8 characters long.</small>
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label" for="repeatPasswordInput">Repeat Password:</label>
+                <input class="form-control" type="password" id="repeatPasswordInput" name="repeatPassword" placeholder="Enter your password again" required />
+                <small id="repeatPasswordError" class="text-danger d-none">Passwords do not match.</small>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('registerForm').addEventListener('submit', function (event) {
+        let isValid = true;
+
+        // Get form fields
+        const usernameInput = document.getElementById('usernameInput');
+        const passwordInput = document.getElementById('passwordInput');
+        const repeatPasswordInput = document.getElementById('repeatPasswordInput');
+
+        // Get error message elements
+        const usernameError = document.getElementById('usernameError');
+        const passwordError = document.getElementById('passwordError');
+        const repeatPasswordError = document.getElementById('repeatPasswordError');
+
+        // Clear previous errors
+        usernameError.classList.add('d-none');
+        passwordError.classList.add('d-none');
+        repeatPasswordError.classList.add('d-none');
+
+        // Validate username
+        if (usernameInput.value.length < 6) {
+            isValid = false;
+            usernameError.classList.remove('d-none');
+        }
+
+        // Validate password
+        if (passwordInput.value.length < 8) {
+            isValid = false;
+            passwordError.classList.remove('d-none');
+        }
+
+        // Validate repeat password
+        if (passwordInput.value !== repeatPasswordInput.value) {
+            isValid = false;
+            repeatPasswordError.classList.remove('d-none');
+        }
+
+        // If validation fails, prevent form submission
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+</script>
