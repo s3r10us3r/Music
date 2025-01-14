@@ -1,0 +1,73 @@
+@model Music.Dtos.UserExpandedDto
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = $"{Model.Username}'s Profile";
+}
+
+<div class="container mt-4">
+    <!-- User's Username -->
+    <h1 class="text-center">@Model.Username's Profile</h1>
+    <hr />
+
+    <!-- Reviews Section -->
+    <div class="mb-5">
+        <h2>Reviews</h2>
+        @if (Model.ReviewAlbumPairs.Any())
+        {
+            <ul class="list-group">
+                @foreach (var pair in Model.ReviewAlbumPairs)
+                {
+                    <li class="list-group-item mb-3 shadow-sm">
+                        <div class="row align-items-center">
+                            <!-- Album Information -->
+                            <div class="col-md-3">
+                                <img src="data:image/jpeg;base64,@pair.Album.Image" alt="@pair.Album.Name" class="img-fluid album-thumbnail rounded" />
+                            </div>
+                            <div class="col-md-9">
+                                <h4 class="text-primary">@pair.Album.Name</h4>
+                                <p><strong>Artist:</strong> @pair.Album.Artist</p>
+                                <p><strong>Year:</strong> @pair.Album.Year</p>
+                                <p>
+                                    <strong>Average Score:</strong> @pair.Album.AverageScore/5.0 
+                                    (<strong>@pair.Album.ReviewCount</strong> reviews)
+                                </p>
+                                <hr />
+                                <!-- User's Review -->
+                                <p><strong>Your Score:</strong> @pair.Review.Value/5</p>
+                                <p>@pair.Review.Message</p>
+                            </div>
+                        </div>
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p class="text-muted">You haven't reviewed any albums yet.</p>
+        }
+    </div>
+</div>
+
+<!-- Optional Styling -->
+<style>
+    .album-thumbnail {
+        width: 100%; /* Responsive scaling */
+        max-width: 150px; /* Fixed width */
+        height: 150px; /* Fixed height */
+        object-fit: cover; /* Ensures the image is cropped to fit the area */
+    }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .list-group-item {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .list-group-item:hover {
+        background-color: #f8f9fa;
+    }
+</style>

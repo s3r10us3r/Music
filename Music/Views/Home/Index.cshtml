@@ -3,32 +3,45 @@
 @{
     ViewData["Title"] = "Albums";
     Layout = "_Layout";
+
+    // Retrieve the search query from the HTTP context
+    var searchQuery = ViewContext.HttpContext.Request.Query["search"];
 }
 
 <div class="container mt-4">
-    <h1 class="text-center mb-4">Albums</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Albums</h1>
+
+        <!-- Search Bar -->
+        <form id="searchForm" class="d-flex" method="get">
+            <input type="text" id="searchInput" name="search" class="form-control me-2" placeholder="Search albums..." value="@searchQuery" />
+            <button type="submit" class="btn btn-outline-primary">Search</button>
+        </form>
+    </div>
 
     <!-- Album List -->
     <div class="list-group">
         @foreach (var album in Model.Albums)
         {
-            <div class="list-group-item mb-3 shadow-sm p-3">
-                <!-- Album Information -->
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <img src="@album.Image" alt="@album.Name" class="img-fluid rounded" />
-                    </div>
-                    <div class="col-md-9">
-                        <h4>@album.Name</h4>
-                        <p><strong>Artist:</strong> @album.Artist</p>
-                        <p><strong>Year:</strong> @album.Year</p>
-                        <p>
-                            <strong>Average Score:</strong> @album.AverageScore/5.0 
-                            (<strong>@album.ReviewCount</strong> reviews)
-                        </p>
+            <a href="@Url.Action("Show", "Albums", new { id = album.Id })" class="text-decoration-none">
+                <div class="list-group-item mb-3 shadow-sm p-3">
+                    <!-- Album Information -->
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <img src="data:image/jpeg;base64,@album.Image" alt="@album.Name" class="img-fluid album-thumbnail rounded" />
+                        </div>
+                        <div class="col-md-9">
+                            <h4 class="text-primary">@album.Name</h4>
+                            <p><strong>Artist:</strong> @album.Artist</p>
+                            <p><strong>Year:</strong> @album.Year</p>
+                            <p>
+                                <strong>Average Score:</strong> @album.AverageScore/5.0 
+                                (<strong>@album.ReviewCount</strong> reviews)
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         }
     </div>
 
@@ -37,12 +50,12 @@
         <ul class="pagination justify-content-center">
             <!-- Previous Page Link -->
             <li class="page-item @(Model.PageNumber <= 1 ? "disabled" : "")">
-                <a class="page-link" href="?page=@(Model.PageNumber - 1)" tabindex="-1" aria-disabled="true">Previous</a>
+                <a class="page-link" href="?page=@(Model.PageNumber - 1)&search=@searchQuery" tabindex="-1" aria-disabled="true">Previous</a>
             </li>
 
             <!-- First Page Link -->
             <li class="page-item @(Model.PageNumber == 1 ? "active" : "")">
-                <a class="page-link" href="?page=1">1</a>
+                <a class="page-link" href="?page=1&search=@searchQuery">1</a>
             </li>
 
             <!-- Ellipsis Before Current Page -->
@@ -57,7 +70,7 @@
             @for (int i = Math.Max(2, Model.PageNumber - 1); i <= Math.Min(Model.PageCount - 1, Model.PageNumber + 1); i++)
             {
                 <li class="page-item @(Model.PageNumber == i ? "active" : "")">
-                    <a class="page-link" href="?page=@i">@i</a>
+                    <a class="page-link" href="?page=@i&search=@searchQuery">@i</a>
                 </li>
             }
 
@@ -73,13 +86,13 @@
             @if (Model.PageCount > 1)
             {
                 <li class="page-item @(Model.PageNumber == Model.PageCount ? "active" : "")">
-                    <a class="page-link" href="?page=@Model.PageCount">@Model.PageCount</a>
+                    <a class="page-link" href="?page=@Model.PageCount&search=@searchQuery">@Model.PageCount</a>
                 </li>
             }
 
             <!-- Next Page Link -->
             <li class="page-item @(Model.PageNumber >= Model.PageCount ? "disabled" : "")">
-                <a class="page-link" href="?page=@(Model.PageNumber + 1)">Next</a>
+                <a class="page-link" href="?page=@(Model.PageNumber + 1)&search=@searchQuery">Next</a>
             </li>
         </ul>
     </nav>
@@ -96,4 +109,28 @@
     .pagination .page-item.disabled .page-link {
         color: #6c757d;
     }
+
+    .list-group-item:hover {
+        background-color: #f8f9fa;
+    }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .album-thumbnail {
+        width: 100%; /* Responsive scaling */
+        max-width: 150px; /* Fixed width */
+        height: 150px; /* Fixed height */
+        object-fit: cover; /* Ensures the image is cropped to fit the area */
+    }
 </style>
+
+<script>
+    document.getElementById("searchForm").addEventListener("submit", function (event) {
+        const searchInput = document.getElementById("searchInput").value.trim();
+        if (searchInput === "") {
+            event.preventDefault(); // Prevent submitting empty searches
+        }
+    });
+</script>

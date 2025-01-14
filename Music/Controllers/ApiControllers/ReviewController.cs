@@ -26,24 +26,33 @@ public class ReviewController : Controller
         var idString = GetUserId();
         if (idString == null)
         {
-            return Unauthorized();
+            return Unauthorized(new MessageDto("No sub in jwt"));
         }
-
         var id = int.Parse(idString);
-        var review = new Review()
+        var existingReview = await _reviewRepo.FindAsync(r => r.AlbumId == dto.AlbumId && r.UserId == id);
+        if (existingReview == null)
         {
-            Message = dto.Message,
-            Value = dto.Value,
-            AlbumId = dto.AlbumId,
-            UserId = id
-        };
-        await _reviewRepo.CreateAsync(review);
+            var review = new Review()
+            {
+                Message = dto.Message,
+                Value = dto.Value,
+                AlbumId = dto.AlbumId,
+                UserId = id
+            };
+            await _reviewRepo.CreateAsync(review);
+        }
+        else
+        {
+            existingReview.Message = dto.Message;
+            existingReview.Value = dto.Value;
+            await _reviewRepo.UpdateAsync(existingReview);
+        }
         return Ok();
     }
 
     private string? GetUserId()
     {
-        var userId = User.FindFirstValue("sub");
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
         return userId;
     }
 }

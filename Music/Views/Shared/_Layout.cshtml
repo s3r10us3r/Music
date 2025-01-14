@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" />
     <style>
         html, body {
-            height: 100%; /* Ensure the body takes up the full height */
+            height: 100%;
         }
         body {
             display: flex;
             flex-direction: column;
-            background-color: #f8f9fa; /* Light blueish background */
-            color: #000; /* Black text for contrast */
+            background-color: #f8f9fa;
+            color: #000;
         }
         .navbar {
-            background-color: #007bff; /* Bootstrap primary blue */
+            background-color: #007bff;
         }
         .navbar-brand, .nav-link {
-            color: #fff !important; /* White text on the navbar */
+            color: #fff !important;
         }
         .navbar-brand:hover, .nav-link:hover {
-            color: #cce5ff !important; /* Lighter blue hover effect */
+            color: #cce5ff !important;
         }
         main {
-            flex: 1; /* Make the main content area grow to fill available space */
+            flex: 1;
         }
         footer {
             color: #000;
@@ -41,6 +41,24 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">MyMusicList</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <!-- Add Album Tab (Visible only when logged in) -->
+                    <li class="nav-item" id="addAlbumNav" style="display: none;">
+                        <a class="nav-link" href="/Albums/Add">Add Album</a>
+                    </li>
+                    
+                    <!-- User Search Tab -->
+                    <li class="nav-item" id="userSearchNav" style="display: none;">
+                        <a class="nav-link" href="/Users/Search">Search Users</a>
+                    </li>
+                    
+                    <!-- Login/Logout Tab -->
+                    <li class="nav-item" id="authNav">
+                        <a class="nav-link" href="/Auth/Login">Login</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -55,18 +73,39 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-    function getAuthHeader() {
-        const jwt = localStorage.getItem("jwt");
-        let now = new Date();
-        if (!jwt || jwt.expiry < now) {
-            localStorage.removeItem("jwt");
-            return null;
+    document.addEventListener("DOMContentLoaded", () => {
+        const jwtObject = localStorage.getItem("jwt");
+
+        if (jwtObject) {
+            try {
+                // Parse the stored JWT object
+                const tokenData = JSON.parse(jwtObject);
+                const now = new Date();
+
+                // Check if the token has expired
+                if (new Date(tokenData.expiry) > now) {
+                    // User is logged in
+                    document.getElementById("authNav").innerHTML = `<a class="nav-link" href="#" onclick="logout()">Logout</a>`;
+                    document.getElementById("addAlbumNav").style.display = "block";
+                    document.getElementById("userSearchNav").style.display = "block"; // Show user search navigation
+                } else {
+                    // Token expired, remove it
+                    localStorage.removeItem("jwt");
+                }
+            } catch (error) {
+                console.error("Invalid JWT format or error parsing token", error);
+                localStorage.removeItem("jwt");
+            }
         }
-        return {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${jwt.value}`
-        };
+    });
+
+    function logout() {
+        // Remove the token from localStorage and redirect
+        localStorage.removeItem("jwt");
+        alert("You have been logged out.");
+        window.location.href = "/";
     }
 </script>
+
 </body>
 </html>

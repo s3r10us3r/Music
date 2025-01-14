@@ -41,9 +41,7 @@
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.Music.props
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.Music.props
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/staticwebassets.pack.json
-/home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/scopedcss/bundle/Music.styles.css
-/home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/scopedcss/projectbundle/Music.bundle.scp.css
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/Music.csproj.Up2Date
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/Music.dll
 /home/tradeckm/team_project/Website/Music/Music/obj/Debug/net8.0/refint/Music.dll

@@ -18,7 +18,8 @@ public class AlbumService
     public async Task<double> GetAverageScore(int id)
     {
         var reviewSet = _db.Set<Review>();
-        return await reviewSet.Where(r => r.AlbumId == id).AverageAsync(r => r.Value);
+        var score = await reviewSet.Where(r => r.AlbumId == id).Select(r => (double?)r.Value).AverageAsync() ?? 0.0;
+        return Math.Round(score, 2);
     }
 
     public async Task<int> GetReviewCount(int id)
@@ -38,12 +39,12 @@ public class AlbumService
         
         var albumSet = _db.Set<Album>();
         var filtered =
-            albumSet.Where(a => a.Name.Contains(request.SearchQuery) || a.Artist.Contains(request.SearchQuery));
+            albumSet.Where(a => a.Name.ToLower().Contains(request.SearchQuery.ToLower()) || a.Artist.ToLower().Contains(request.SearchQuery.ToLower()));
         
         if (request.SortProperty == "AverageScore")
         {
-            var tasksBlock = filtered.Select(a => GetAlbumDto(a));
-            var dtos = await Task.WhenAll(tasksBlock);
+            var tasksBlock = await filtered.ToListAsync();
+            var dtos = await GetAlbumDtoList(tasksBlock);
             return request.SortOrder.ToLower() switch
             {
                 "descending" => dtos.OrderByDescending(d => d.AverageScore).Take(new Range(start, end)).ToList(),
@@ -59,11 +60,23 @@ public class AlbumService
             _ => filtered
         };
         
-        var tasks = sorted.Take(new Range(start, end)).Select(a => GetAlbumDto(a));
-        var result = await Task.WhenAll(tasks);
+        var albumList = sorted.Take(new Range(start, end)).ToList();
+        var result = await GetAlbumDtoList(albumList);
         return result.ToList();
     }
 
+    public async Task<List<AlbumDto>> GetAlbumDtoList(List<Album> albums)
+    {
+        List<AlbumDto> dtos = [];
+        foreach (var album in albums)
+        {
+            var dto = await GetAlbumDto(album);
+            dtos.Add(dto);
+        }
+
+        return dtos;
+    }
+    
     public async Task<AlbumDto> GetAlbumDto(Album album)
     {
         return new AlbumDto()
