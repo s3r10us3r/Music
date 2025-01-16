@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:MusicMaui.ViewModels"
+             x:Class="MusicMaui.Views.AlbumDetailsPage"
+             BackgroundColor="#f8f9fa"
+             Title="{Binding AlbumName}">
+
+    <VerticalStackLayout Padding="10">
+
+        <!-- Album Information -->
+        <Frame BackgroundColor="White" Padding="15" CornerRadius="10">
+            <Grid ColumnDefinitions="120, *">
+                <Image Source="{Binding Image}"
+                       Aspect="AspectFill"
+                       WidthRequest="120"
+                       HeightRequest="120"
+                       VerticalOptions="Center"/>
+
+                <VerticalStackLayout Grid.Column="1" Padding="10">
+                    <Label Text="{Binding AlbumName}" FontSize="24" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="{Binding Artist}" FontSize="18" TextColor="#6c757d"/>
+                    <Label Text="{Binding Year}" FontSize="16" TextColor="#6c757d"/>
+                    <Label Text="{Binding AverageScore, StringFormat='Score: {0}/5.0'}" FontSize="16" TextColor="#007bff"/>
+                </VerticalStackLayout>
+            </Grid>
+        </Frame>
+
+        <!-- Reviews Section -->
+        <Label Text="Reviews" FontSize="22" FontAttributes="Bold" TextColor="Black" Padding="10"/>
+
+        <CollectionView ItemsSource="{Binding Reviews}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White" Padding="10" Margin="5" CornerRadius="10">
+                        <VerticalStackLayout>
+                            <!-- Review Poster (Clickable) -->
+                            <Label Text="{Binding PosterName}" 
+                                   FontSize="16" 
+                                   FontAttributes="Bold" 
+                                   TextColor="Blue">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:AlbumDetailsViewModel}}, Path=GoToUserProfileCommand}"
+                                                          CommandParameter="{Binding PosterId}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                            <Label Text="{Binding Value, StringFormat='Score: {0}/5'}" FontSize="14" TextColor="#007bff"/>
+                            <Label Text="{Binding Message}" FontSize="14" TextColor="Black"/>
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Add Review Form (Visible Only When Logged In) -->
+        <Frame BackgroundColor="White" Padding="10" CornerRadius="10" IsVisible="{Binding CanSubmitReview}">
+            <VerticalStackLayout>
+                <Label Text="Add Your Review" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+
+                <Slider Minimum="1" Maximum="5" Value="{Binding ReviewValue}" />
+                <Label Text="{Binding ReviewValue, StringFormat='Score: {0}/5'}" FontSize="14" TextColor="#007bff"/>
+
+                <Editor Placeholder="Write your review..." Text="{Binding ReviewMessage}" HeightRequest="100"/>
+                <Button Text="Submit" Command="{Binding SubmitReviewCommand}" BackgroundColor="#007bff" TextColor="White"/>
+            </VerticalStackLayout>
+        </Frame>
+
+        <ActivityIndicator IsRunning="{Binding IsLoading}" IsVisible="{Binding IsLoading}" Color="#007bff"/>
+    </VerticalStackLayout>
+</ContentPage>

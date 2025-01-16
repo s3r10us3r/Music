@@ -1,0 +1,326 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\jedyn\\Desktop\\music\\Music\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B57FB891-A91D-43C8-A00B-1972B735C192}|Music\\Music.csproj|c:\\users\\jedyn\\desktop\\music\\music\\music\\controllers\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57FB891-A91D-43C8-A00B-1972B735C192}|Music\\Music.csproj|solutionrelative:music\\controllers\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B57FB891-A91D-43C8-A00B-1972B735C192}|Music\\Music.csproj|c:\\users\\jedyn\\desktop\\music\\music\\music\\controllers\\apicontrollers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B57FB891-A91D-43C8-A00B-1972B735C192}|Music\\Music.csproj|solutionrelative:music\\controllers\\apicontrollers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\viewmodels\\userprofileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\userprofilepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\addalbumpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\addalbumpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA565995-297D-463D-8B19-3E69B6113121}|Shared\\Shared.csproj|c:\\users\\jedyn\\desktop\\music\\music\\shared\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA565995-297D-463D-8B19-3E69B6113121}|Shared\\Shared.csproj|solutionrelative:shared\\dtos\\reviewdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\webservices\\userwebservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\webservices\\userwebservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\userprofilepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\displaymodel\\reviewalbumpairdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\displaymodel\\reviewalbumpairdisplay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA565995-297D-463D-8B19-3E69B6113121}|Shared\\Shared.csproj|c:\\users\\jedyn\\desktop\\music\\music\\shared\\dtos\\reviewalbumpair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA565995-297D-463D-8B19-3E69B6113121}|Shared\\Shared.csproj|solutionrelative:shared\\dtos\\reviewalbumpair.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\albumdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\albumdetailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\viewmodels\\albumdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\viewmodels\\albumdetailsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\albumdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\albumdetailspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\webservices\\albumwebservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\webservices\\albumwebservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\views\\loginpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|c:\\users\\jedyn\\desktop\\music\\music\\musicmaui\\viewmodels\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6A70149-50C6-43A8-A802-3E45C8EC727C}|MusicMaui\\MusicMaui.csproj|solutionrelative:musicmaui\\viewmodels\\extensions\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\Controllers\\Users.cs",
+              "RelativeDocumentMoniker": "Music\\Controllers\\Users.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\Controllers\\Users.cs",
+              "RelativeToolTip": "Music\\Controllers\\Users.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T22:08:55.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\Controllers\\ApiControllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Music\\Controllers\\ApiControllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\Controllers\\ApiControllers\\UserController.cs",
+              "RelativeToolTip": "Music\\Controllers\\ApiControllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T22:08:52.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ReviewAlbumPairDisplay.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\DisplayModel\\ReviewAlbumPairDisplay.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\DisplayModel\\ReviewAlbumPairDisplay.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\DisplayModel\\ReviewAlbumPairDisplay.cs",
+              "RelativeToolTip": "MusicMaui\\DisplayModel\\ReviewAlbumPairDisplay.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:51:35.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserProfilePage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\UserProfilePage.xaml.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\UserProfilePage.xaml.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\UserProfilePage.xaml.cs",
+              "RelativeToolTip": "MusicMaui\\Views\\UserProfilePage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:48:10.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserWebService.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\WebServices\\UserWebService.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\WebServices\\UserWebService.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\WebServices\\UserWebService.cs",
+              "RelativeToolTip": "MusicMaui\\WebServices\\UserWebService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:39:48.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ReviewDto.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Shared\\Dtos\\ReviewDto.cs",
+              "RelativeDocumentMoniker": "Shared\\Dtos\\ReviewDto.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Shared\\Dtos\\ReviewDto.cs",
+              "RelativeToolTip": "Shared\\Dtos\\ReviewDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:38:24.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddAlbumPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\AddAlbumPage.xaml",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\AddAlbumPage.xaml",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\AddAlbumPage.xaml",
+              "RelativeToolTip": "MusicMaui\\Views\\AddAlbumPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-16T21:31:14.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\Extensions\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\Extensions\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\Extensions\\DependencyInjection.cs",
+              "RelativeToolTip": "MusicMaui\\Views\\Extensions\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:29:44.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserProfilePage.xaml",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\UserProfilePage.xaml",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\UserProfilePage.xaml",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\UserProfilePage.xaml",
+              "RelativeToolTip": "MusicMaui\\Views\\UserProfilePage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-16T21:25:25.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserProfileViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\ViewModels\\UserProfileViewModel.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\ViewModels\\UserProfileViewModel.cs",
+              "RelativeToolTip": "MusicMaui\\ViewModels\\UserProfileViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAmwDkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:24:20.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReviewAlbumPair.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Shared\\Dtos\\ReviewAlbumPair.cs",
+              "RelativeDocumentMoniker": "Shared\\Dtos\\ReviewAlbumPair.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Shared\\Dtos\\ReviewAlbumPair.cs",
+              "RelativeToolTip": "Shared\\Dtos\\ReviewAlbumPair.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:51:02.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AlbumWebService.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\WebServices\\AlbumWebService.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\WebServices\\AlbumWebService.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\WebServices\\AlbumWebService.cs",
+              "RelativeToolTip": "MusicMaui\\WebServices\\AlbumWebService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:11:10.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AlbumDetailsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\AlbumDetailsPage.xaml",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\AlbumDetailsPage.xaml",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\AlbumDetailsPage.xaml",
+              "RelativeToolTip": "MusicMaui\\Views\\AlbumDetailsPage.xaml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAADcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-16T21:09:57.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\AppShell.xaml.cs",
+              "RelativeToolTip": "MusicMaui\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:26:02.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AlbumDetailsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\ViewModels\\AlbumDetailsViewModel.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\ViewModels\\AlbumDetailsViewModel.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\ViewModels\\AlbumDetailsViewModel.cs",
+              "RelativeToolTip": "MusicMaui\\ViewModels\\AlbumDetailsViewModel.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAkwGsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:09:51.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\ViewModels\\Extensions\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\ViewModels\\Extensions\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\ViewModels\\Extensions\\DependencyInjection.cs",
+              "RelativeToolTip": "MusicMaui\\ViewModels\\Extensions\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:29:53.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AlbumDetailsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\AlbumDetailsPage.xaml.cs",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\AlbumDetailsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\AlbumDetailsPage.xaml.cs",
+              "RelativeToolTip": "MusicMaui\\Views\\AlbumDetailsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-16T21:09:56.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "LoginPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\LoginPage.xaml",
+              "RelativeDocumentMoniker": "MusicMaui\\Views\\LoginPage.xaml",
+              "ToolTip": "C:\\Users\\jedyn\\Desktop\\music\\Music\\MusicMaui\\Views\\LoginPage.xaml",
+              "RelativeToolTip": "MusicMaui\\Views\\LoginPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-16T21:31:20.656Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

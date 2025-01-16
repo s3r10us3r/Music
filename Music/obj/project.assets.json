@@ -842,6 +842,19 @@
         "runtime": {
           "bin/placeholder/Models.dll": {}
         }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -2163,6 +2176,11 @@
       "type": "project",
       "path": "../Models/Models.csproj",
       "msbuildProject": "../Models/Models.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2170,40 +2188,51 @@
       "Dal >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.11",
       "Models >= 1.0.0",
+      "Shared >= 1.0.0",
       "Swashbuckle.AspNetCore >= 7.2.0"
     ]
   },
   "packageFolders": {
-    "/home/tradeckm/.nuget/packages/": {}
+    "C:\\Users\\jedyn\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/tradeckm/team_project/Website/Music/Music/Music.csproj",
+      "projectUniqueName": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\Music.csproj",
       "projectName": "Music",
-      "projectPath": "/home/tradeckm/team_project/Website/Music/Music/Music.csproj",
-      "packagesPath": "/home/tradeckm/.nuget/packages/",
-      "outputPath": "/home/tradeckm/team_project/Website/Music/Music/obj/",
+      "projectPath": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\Music.csproj",
+      "packagesPath": "C:\\Users\\jedyn\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Music\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/tradeckm/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\jedyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/home/tradeckm/.dotnet/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj": {
-              "projectPath": "/home/tradeckm/team_project/Website/Music/Dal/Dal.csproj"
+            "C:\\Users\\jedyn\\Desktop\\music\\Music\\Dal\\Dal.csproj": {
+              "projectPath": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Dal\\Dal.csproj"
             },
-            "/home/tradeckm/team_project/Website/Music/Models/Models.csproj": {
-              "projectPath": "/home/tradeckm/team_project/Website/Music/Models/Models.csproj"
+            "C:\\Users\\jedyn\\Desktop\\music\\Music\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Models\\Models.csproj"
+            },
+            "C:\\Users\\jedyn\\Desktop\\music\\Music\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\jedyn\\Desktop\\music\\Music\\Shared\\Shared.csproj"
             }
           }
         }
@@ -2217,7 +2246,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -2251,7 +2281,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/tradeckm/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

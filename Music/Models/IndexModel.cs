@@ -1,4 +1,4 @@
-using Music.Dtos;
+using Shared.Dtos;
 
 namespace Music.Models;
 

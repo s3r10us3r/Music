@@ -2,7 +2,7 @@ using Dal;
 using Dal.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Models;
-using Music.Dtos;
+using Shared.Dtos;
 
 namespace Music.Services;
 

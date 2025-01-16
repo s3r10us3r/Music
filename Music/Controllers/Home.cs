@@ -2,9 +2,9 @@ using Dal;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
-using Music.Dtos;
 using Music.Models;
 using Music.Services;
+using Shared.Dtos;
 
 namespace Music.Controllers;
 

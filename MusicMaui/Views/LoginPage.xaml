@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MusicMaui.ViewModels"
+             x:Class="MusicMaui.Views.LoginPage"
+             BackgroundColor="#f8f9fa">
+
+    <VerticalStackLayout Spacing="20" Padding="30"
+                         VerticalOptions="Center">
+        <!-- App Title -->
+        <Label Text="MyMusicList" FontSize="32" HorizontalOptions="Center"
+               TextColor="#007bff" FontAttributes="Bold" />
+
+        <!-- Username Input -->
+        <Entry x:Name="UsernameEntry" Placeholder="Username"
+               Text="{Binding Username}" 
+               PlaceholderColor="#6c757d"
+               BackgroundColor="White"
+               TextColor="Black"
+               FontSize="18"
+               HeightRequest="50" />
+
+        <!-- Password Input -->
+        <Entry x:Name="PasswordEntry" Placeholder="Password"
+               Text="{Binding Password}" 
+               IsPassword="True" 
+               PlaceholderColor="#6c757d"
+               BackgroundColor="White"
+               TextColor="Black"
+               FontSize="18"
+               HeightRequest="50" />
+
+        <!-- Login Button -->
+        <Button Text="Login" Command="{Binding LoginCommand}" 
+                BackgroundColor="#007bff" 
+                TextColor="White" 
+                FontSize="18" 
+                CornerRadius="10"
+                HeightRequest="50" />
+
+        <!-- Error Message -->
+        <Label Text="{Binding ErrorMessage}" 
+               TextColor="Red" 
+               IsVisible="{Binding HasError}" 
+               FontSize="14" 
+               HorizontalOptions="Center" />
+
+        <!-- Register Link -->
+        <Label Text="Don't have an account yet? Register here" 
+               TextColor="#007bff" 
+               FontSize="14" 
+               HorizontalOptions="Center"
+               FontAttributes="Bold">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding GoToRegisterCommand}" />
+            </Label.GestureRecognizers>
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>

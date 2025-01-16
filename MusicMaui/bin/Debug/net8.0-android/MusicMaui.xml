@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MusicMaui</name>
+    </assembly>
+    <members>
+        <member name="T:MusicMaui.ViewModels.AddAlbumViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.Name">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.name"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.Artist">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.artist"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.Year">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.year"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.ErrorMessage">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.errorMessage"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.HasError">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.hasError"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.IsLoading">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.isLoading"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.AlbumCover">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.albumCover"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.IsImageSelected">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AddAlbumViewModel.isImageSelected"/>
+        </member>
+        <member name="F:MusicMaui.ViewModels.AddAlbumViewModel.pickImageCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.AddAlbumViewModel.PickImageCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.PickImageCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.AddAlbumViewModel.PickImage"/>.</summary>
+        </member>
+        <member name="F:MusicMaui.ViewModels.AddAlbumViewModel.addAlbumCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.AddAlbumViewModel.AddAlbumCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AddAlbumViewModel.AddAlbumCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.AddAlbumViewModel.AddAlbum"/>.</summary>
+        </member>
+        <member name="T:MusicMaui.ViewModels.AlbumDetailsViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.IsLoading">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.isLoading"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.AlbumId">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.albumId"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.AlbumName">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.albumName"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.Artist">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.artist"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.Image">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.image"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.Year">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.year"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.AverageScore">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.averageScore"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.ReviewCount">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.reviewCount"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.Reviews">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.reviews"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.ReviewMessage">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.reviewMessage"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.ReviewValue">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.reviewValue"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.CanSubmitReview">
+            <inheritdoc cref="F:MusicMaui.ViewModels.AlbumDetailsViewModel.canSubmitReview"/>
+        </member>
+        <member name="F:MusicMaui.ViewModels.AlbumDetailsViewModel.submitReviewCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.AlbumDetailsViewModel.SubmitReviewCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.SubmitReviewCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.AlbumDetailsViewModel.SubmitReview"/>.</summary>
+        </member>
+        <member name="F:MusicMaui.ViewModels.AlbumDetailsViewModel.goToUserProfileCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.AlbumDetailsViewModel.GoToUserProfileCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.AlbumDetailsViewModel.GoToUserProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MusicMaui.ViewModels.AlbumDetailsViewModel.GoToUserProfile(System.Int32)"/>.</summary>
+        </member>
+        <member name="T:MusicMaui.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.LoginViewModel.Username">
+            <inheritdoc cref="F:MusicMaui.ViewModels.LoginViewModel.username"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:MusicMaui.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.LoginViewModel.ErrorMessage">
+            <inheritdoc cref="F:MusicMaui.ViewModels.LoginViewModel.errorMessage"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.LoginViewModel.HasError">
+            <inheritdoc cref="F:MusicMaui.ViewModels.LoginViewModel.hasError"/>
+        </member>
+        <member name="F:MusicMaui.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="F:MusicMaui.ViewModels.LoginViewModel.goToRegisterCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.LoginViewModel.GoToRegisterCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.LoginViewModel.GoToRegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.LoginViewModel.GoToRegister"/>.</summary>
+        </member>
+        <member name="T:MusicMaui.ViewModels.MainViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.MainViewModel.IsLoading">
+            <inheritdoc cref="F:MusicMaui.ViewModels.MainViewModel.isLoading"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.MainViewModel.Albums">
+            <inheritdoc cref="F:MusicMaui.ViewModels.MainViewModel.albums"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.MainViewModel.SearchQuery">
+            <inheritdoc cref="F:MusicMaui.ViewModels.MainViewModel.searchQuery"/>
+        </member>
+        <member name="F:MusicMaui.ViewModels.MainViewModel.loadMoreAlbumsCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.MainViewModel.LoadMoreAlbumsCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.MainViewModel.LoadMoreAlbumsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.MainViewModel.LoadMoreAlbums"/>.</summary>
+        </member>
+        <member name="F:MusicMaui.ViewModels.MainViewModel.searchAlbumsCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.MainViewModel.SearchAlbumsCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.MainViewModel.SearchAlbumsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.MainViewModel.SearchAlbums"/>.</summary>
+        </member>
+        <member name="F:MusicMaui.ViewModels.MainViewModel.openAlbumDetailsCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.MainViewModel.OpenAlbumDetailsCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.MainViewModel.OpenAlbumDetailsCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MusicMaui.ViewModels.MainViewModel.OpenAlbumDetails(System.Int32)"/>.</summary>
+        </member>
+        <member name="T:MusicMaui.ViewModels.RegisterViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.Username">
+            <inheritdoc cref="F:MusicMaui.ViewModels.RegisterViewModel.username"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.Password">
+            <inheritdoc cref="F:MusicMaui.ViewModels.RegisterViewModel.password"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.ConfirmPassword">
+            <inheritdoc cref="F:MusicMaui.ViewModels.RegisterViewModel.confirmPassword"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.ErrorMessage">
+            <inheritdoc cref="F:MusicMaui.ViewModels.RegisterViewModel.errorMessage"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.HasError">
+            <inheritdoc cref="F:MusicMaui.ViewModels.RegisterViewModel.hasError"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.IsLoading">
+            <inheritdoc cref="F:MusicMaui.ViewModels.RegisterViewModel.isLoading"/>
+        </member>
+        <member name="F:MusicMaui.ViewModels.RegisterViewModel.registerCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.RegisterViewModel.RegisterCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.RegisterCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.RegisterViewModel.Register"/>.</summary>
+        </member>
+        <member name="F:MusicMaui.ViewModels.RegisterViewModel.goToLoginCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.RegisterViewModel.GoToLoginCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.RegisterViewModel.GoToLoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:MusicMaui.ViewModels.RegisterViewModel.GoToLogin"/>.</summary>
+        </member>
+        <member name="T:MusicMaui.ViewModels.UserProfileViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.UserProfileViewModel.IsLoading">
+            <inheritdoc cref="F:MusicMaui.ViewModels.UserProfileViewModel.isLoading"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.UserProfileViewModel.Username">
+            <inheritdoc cref="F:MusicMaui.ViewModels.UserProfileViewModel.username"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.UserProfileViewModel.UserId">
+            <inheritdoc cref="F:MusicMaui.ViewModels.UserProfileViewModel.userId"/>
+        </member>
+        <member name="P:MusicMaui.ViewModels.UserProfileViewModel.Reviews">
+            <inheritdoc cref="F:MusicMaui.ViewModels.UserProfileViewModel.reviews"/>
+        </member>
+        <member name="F:MusicMaui.ViewModels.UserProfileViewModel.loadUserProfileCommand">
+            <summary>The backing field for <see cref="P:MusicMaui.ViewModels.UserProfileViewModel.LoadUserProfileCommand"/>.</summary>
+        </member>
+        <member name="P:MusicMaui.ViewModels.UserProfileViewModel.LoadUserProfileCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:MusicMaui.ViewModels.UserProfileViewModel.LoadUserProfile(System.Int32)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Artist">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Artist" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Year">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Year" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.HasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "HasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AlbumCover">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AlbumCover" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsImageSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsImageSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AlbumId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AlbumId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AlbumName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AlbumName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Image">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Image" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AverageScore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AverageScore" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ReviewCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ReviewCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Reviews">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Reviews" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ReviewMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ReviewMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ReviewValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ReviewValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.CanSubmitReview">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "CanSubmitReview" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Albums">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Albums" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchQuery">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchQuery" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserId" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Name">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Name" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Artist">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Artist" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Year">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Year" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ErrorMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ErrorMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.HasError">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "HasError" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AlbumCover">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AlbumCover" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsImageSelected">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsImageSelected" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AlbumId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AlbumId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AlbumName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AlbumName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Image">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Image" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AverageScore">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AverageScore" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ReviewCount">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ReviewCount" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Reviews">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Reviews" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ReviewMessage">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ReviewMessage" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ReviewValue">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ReviewValue" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.CanSubmitReview">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "CanSubmitReview" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Username">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Username" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Albums">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Albums" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchQuery">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchQuery" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ConfirmPassword">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ConfirmPassword" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserId" generated properties.</summary>
+        </member>
+    </members>
+</doc>

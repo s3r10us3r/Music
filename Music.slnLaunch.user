@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "Music\\Music.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "MusicMaui\\MusicMaui.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

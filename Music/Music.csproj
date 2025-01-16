@@ -9,6 +9,7 @@
     <ItemGroup>
       <ProjectReference Include="..\Dal\Dal.csproj" />
       <ProjectReference Include="..\Models\Models.csproj" />
+      <ProjectReference Include="..\Shared\Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>

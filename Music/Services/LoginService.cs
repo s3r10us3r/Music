@@ -1,11 +1,9 @@
-using System.Net;
 using Dal.Interfaces;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
 using Models;
-using Music.Dtos;
 using Music.Helpers;
 using Music.Services.Interfaces;
+using Shared.Dtos;
 
 namespace Music.Services;
 
@@ -52,6 +50,6 @@ public class LoginService
         if (passwordValidationResult != PasswordVerificationResult.Success)
             return Result<LoginResponseDto>.Failure(401, "Invalid credentials");
         var jwt = _jwtService.CreateJwt(user);
-        return Result<LoginResponseDto>.Success(200, new LoginResponseDto(jwt));
+        return Result<LoginResponseDto>.Success(200, new LoginResponseDto(jwt, DateTime.UtcNow.AddHours(1)));
     }
 }

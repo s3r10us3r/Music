@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicMaui.Views.AddAlbumPage"
+             Title="Add Album"
+             BackgroundColor="#f8f9fa">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Add a New Album"
+               FontSize="28"
+               FontAttributes="Bold"
+               TextColor="#007bff"
+               HorizontalOptions="Center" />
+
+        <!-- Album Name -->
+        <Entry Placeholder="Album Name"
+               Text="{Binding Name}"
+               PlaceholderColor="#6c757d"
+               BackgroundColor="White"
+               TextColor="Black"
+               FontSize="18"
+               HeightRequest="50" />
+
+        <!-- Artist Name -->
+        <Entry Placeholder="Artist Name"
+               Text="{Binding Artist}"
+               PlaceholderColor="#6c757d"
+               BackgroundColor="White"
+               TextColor="Black"
+               FontSize="18"
+               HeightRequest="50" />
+
+        <!-- Release Year -->
+        <Entry Placeholder="Release Year"
+               Text="{Binding Year}"
+               Keyboard="Numeric"
+               PlaceholderColor="#6c757d"
+               BackgroundColor="White"
+               TextColor="Black"
+               FontSize="18"
+               HeightRequest="50" />
+
+        <!-- Image Picker -->
+        <Button Text="Select Album Cover"
+                Command="{Binding PickImageCommand}"
+                BackgroundColor="#007bff"
+                TextColor="White"
+                FontSize="18"
+                CornerRadius="10"
+                HeightRequest="50" />
+
+        <!-- Display Selected Image -->
+        <Image Source="{Binding AlbumCover}"
+               HeightRequest="150"
+               WidthRequest="150"
+               Aspect="AspectFill"
+               HorizontalOptions="Center"
+               IsVisible="{Binding IsImageSelected}" />
+
+        <!-- Submit Button -->
+        <Button Text="Add Album"
+                Command="{Binding AddAlbumCommand}"
+                BackgroundColor="#007bff"
+                TextColor="White"
+                FontSize="18"
+                CornerRadius="10"
+                HeightRequest="50" />
+
+        <!-- Error Message -->
+        <Label Text="{Binding ErrorMessage}"
+               TextColor="Red"
+               FontSize="14"
+               HorizontalOptions="Center"
+               IsVisible="{Binding HasError}" />
+
+        <ActivityIndicator IsRunning="{Binding IsLoading}"
+                           IsVisible="{Binding IsLoading}"
+                           Color="#007bff" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -3,7 +3,7 @@ using Dal.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Models;
-using Music.Dtos;
+using Shared.Dtos;
 
 namespace Music.Controllers.ApiControllers;
 

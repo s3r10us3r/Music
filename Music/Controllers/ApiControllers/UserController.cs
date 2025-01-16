@@ -1,8 +1,7 @@
 using Dal.Interfaces;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Music.Dtos;
 using Music.Services;
+using Shared.Dtos;
 
 namespace Music.Controllers.ApiControllers;
 

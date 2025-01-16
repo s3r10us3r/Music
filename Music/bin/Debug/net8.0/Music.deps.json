@@ -11,6 +11,7 @@
           "Dal": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.11",
           "Models": "1.0.0",
+          "Shared": "1.0.0",
           "Swashbuckle.AspNetCore": "7.2.0"
         },
         "runtime": {
@@ -578,6 +579,17 @@
             "fileVersion": "1.0.0.0"
           }
         }
+      },
+      "Shared/1.0.0": {
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "runtime": {
+          "Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
       }
     }
   },
@@ -894,6 +906,11 @@
       "sha512": ""
     },
     "Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

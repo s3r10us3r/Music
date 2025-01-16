@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MusicMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:MusicMaui.Views"
+    FlyoutBehavior="Flyout"
+    Title="MyMusicList">
+
+    <!-- Flyout Menu -->
+    <FlyoutItem Title="MyMusicList" Icon="home.png">
+        <ShellContent Title="Albums" ContentTemplate="{DataTemplate views:MainPage}" Route="MainPage" />
+    </FlyoutItem>
+    <!--
+    <FlyoutItem Title="Add Album" Icon="add.png">
+        <ShellContent Title="Add Album" ContentTemplate="{DataTemplate views:AddAlbumPage}" Route="AddAlbumPage" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Search Users" Icon="search.png">
+        <ShellContent Title="Search Users" ContentTemplate="{DataTemplate views:SearchUsersPage}" Route="SearchUsersPage" />
+    </FlyoutItem>
+    -->
+    <FlyoutItem Title="Logout" Icon="logout.png">
+        <ShellContent Title="Logout" ContentTemplate="{DataTemplate views:LogoutPage}" Route="LogoutPage" />
+    </FlyoutItem>
+
+    <ShellContent Title="Add Album" ContentTemplate="{DataTemplate views:AddAlbumPage}" Route="AddAlbumPage" />
+    <!-- Hidden Pages -->
+</Shell>

@@ -1,10 +1,9 @@
 using Dal.Interfaces;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Models;
-using Music.Dtos;
 using Music.Services;
+using Shared.Dtos;
 
 namespace Music.Controllers.ApiControllers;
 
@@ -59,10 +58,11 @@ public class AlbumController : ControllerBase
     }
 
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<AlbumDto>))]
-    [HttpPost("/getPage")]
+    [HttpPost("getPage")]
     public async Task<IActionResult> GetPaged([FromBody] AlbumPagedRequest request)
     {
-        var result = _albumService.GetPage(request);
+        var result = await _albumService.GetPage(request);
+        Console.WriteLine($"Results loaded, result count: {result.Count}, search query: {request.SearchQuery}");
         return Ok(result);
     }
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MusicMaui.Views.UserProfilePage"
+             Title="User Profile"
+             BackgroundColor="#f8f9fa">
+
+    <VerticalStackLayout Padding="10">
+        <Label Text="{Binding Username}" 
+               FontSize="32" 
+               FontAttributes="Bold"
+               TextColor="#007bff"
+               HorizontalOptions="Center"/>
+
+        <ActivityIndicator IsRunning="{Binding IsLoading}" 
+                           IsVisible="{Binding IsLoading}" 
+                           Color="#007bff"/>
+
+        <CollectionView ItemsSource="{Binding Reviews}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="White" Padding="10" Margin="5" CornerRadius="10"
+                           HasShadow="True">
+                        <Grid ColumnDefinitions="100, *">
+                            <!-- Album Image -->
+                            <Image Source="{Binding Album.Image}" 
+                                   Aspect="AspectFill"
+                                   WidthRequest="100"
+                                   HeightRequest="100"
+                                   VerticalOptions="Center"/>
+
+                            <!-- Review and Album Info -->
+                            <VerticalStackLayout Grid.Column="1" Padding="10">
+                                <Label Text="{Binding Album.Name}" 
+                                       FontSize="20"
+                                       FontAttributes="Bold"
+                                       TextColor="Black"/>
+                                <Label Text="{Binding Album.Artist}" 
+                                       FontSize="16"
+                                       TextColor="#6c757d"/>
+                                <Label Text="{Binding Review.Value, StringFormat='Score: {0}/5.0'}" 
+                                       FontSize="14"
+                                       TextColor="#007bff"/>
+                                <Label Text="{Binding Review.Message}" 
+                                       FontSize="14"
+                                       TextColor="Black"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
